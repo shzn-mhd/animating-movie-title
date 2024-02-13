@@ -21,10 +21,11 @@
        .box{
         width: 400px;
         height: 220px;
-        outline: 1px solid red;
+        /* outline: 1px solid red; */
         position: relative;
         transform-style: preserve-3d;
-        transform: rotateY(20deg);
+        /* transform: rotateY(35deg); */
+        animation: animate 20s linear infinite;
        }
 
        .box span img{
@@ -44,9 +45,18 @@
         height: 100%;
         transform: rotateX(calc(var(--i) * 45deg)) 
                    translateZ(300px) 
-                   rotateY(20deg);
+                  
        }
 
+    @keyframes animate{
+        0%{
+            transform: rotateX(0deg);
+        }
+
+        0%{
+            transform: rotateX(360deg);
+        }
+    }
 
     </style>
 </head>
