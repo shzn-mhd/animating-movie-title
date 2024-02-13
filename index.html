@@ -7,9 +7,9 @@
    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    <h2>Harry Potter</h2>
+    <h2 id="movieTitle">Harry Potter</h2>
     <div class="outer-div">
-        <div class="box">
+        <div class="box" id="imageContainer">
             <p class="harry">Harry Potter</p>
             <span style="--i: 1">
                 <img src="1.png" 
@@ -57,6 +57,36 @@
 
     <script>
 
+
+        const movieList = [
+            "Sorcerer's Stone ",
+            "Chamber of Secrets",
+            "Prisoner of Azkaban",
+            "Goblet of Fire",
+            "Order of Phoenix",
+            "Half-Blood Prince",
+            "Deathly Hallows - part 1",
+            "Deathly Hallows - part 2",
+        ];
+
+        var container = document.getElementById('imageContainer');
+        var movieTitle = document.getElementById('movieTitle');
+
+        container.addEventListener('mouseover', function(event) {
+            if (event.target.tagName === 'IMG') {
+                // console.log('first');
+
+                var iValue = window
+                .getComputedStyle(event.target.parentNode)
+                .getPropertyValue('--i');
+
+                movieTitle.innerText="Harry Potter " +movieList[iValue-1];
+            }
+        });
+        container.addEventListener('mouseout', function() {
+            movieTitle.innerText="Harry Potter";
+        });
+            
 
     </script>
 
