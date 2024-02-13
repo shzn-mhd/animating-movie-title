@@ -23,6 +23,7 @@
         height: 220px;
         outline: 1px solid red;
         position: relative;
+        transform-style: preserve-3d;
        }
 
        .box span img{
@@ -40,7 +41,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transform: rotateX(calc(var(--i) * 45deg)) translateZ(300px);
+        transform: rotateX(calc(var(--i) * 45deg)) 
+                   translateZ(300px) 
+                   rotateY(20deg);
        }
 
 
@@ -50,42 +53,42 @@
     <div class="outer-div">
         <div class="box">
             <span style="--i: 1">
-                <img src="download.jpeg" 
+                <img src="1.png" 
                 alt="">
             </span>
 
             <span style="--i: 2">
-                <img src="download.jpeg" 
+                <img src="2.jpg"
                 alt="">
             </span>
 
             <span style="--i: 3">
-                <img src="download.jpeg" 
+                <img src="3.jpg" 
                 alt="">
             </span>
 
             <span style="--i: 4">
-                <img src="download.jpeg" 
+                <img src="4.jpg" 
                 alt="">
             </span>
 
             <span style="--i: 5">
-                <img src="download.jpeg" 
+                <img src="5.jpg" 
                 alt="">
             </span>
 
             <span style="--i: 6">
-                <img src="download.jpeg" 
+                <img src="6.jpg" 
                 alt="">
             </span>
 
             <span style="--i: 7">
-                <img src="download.jpeg" 
+                <img src="7.jpg" 
                 alt="">
             </span>
 
             <span style="--i: 8">
-                <img src="download.jpeg" 
+                <img src="8.jpg" 
                 alt="">
             </span>
 
