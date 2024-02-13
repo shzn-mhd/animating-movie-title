@@ -7,6 +7,7 @@
     <style>
         *{
             margin: 0;
+            --view-angle: 1000;
         }
 
         .outer-div{
@@ -50,11 +51,11 @@
 
     @keyframes animate{
         0%{
-            transform: rotateX(0deg);
+            transform: perspective(calc(var(--view-angle) * 1px)) rotateX(0deg) rotateY(35deg);
         }
 
-        0%{
-            transform: rotateX(360deg);
+        100%{
+            transform: perspective(calc(var(--view-angle) * 1px)) rotateX(360deg) rotateY(35deg);
         }
     }
 
